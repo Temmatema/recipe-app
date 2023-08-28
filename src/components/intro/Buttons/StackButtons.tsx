@@ -40,7 +40,7 @@ const logos = [
   },
   {
     name: "GitHub",
-    url: "#",
+    url: "https://github.com/Temmatema/recipe-app",
     imgSrc: "src/img/github-logo.png",
   },
   {
