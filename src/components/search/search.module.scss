@@ -1,0 +1,21 @@
+.input-wrap {
+  @apply flex items-center bg-gray-100 gap-4
+  w-1/2 max-w-2xl m-auto h-16 px-10 rounded-2xl shadow-md;
+
+  svg {
+    @apply w-7 h-7 stroke-gray-500;
+  }
+}
+
+.input {
+  @apply bg-gray-100 text-3xl font-poppins caret-slate-800
+   text-gray-600 block w-full;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input::placeholder {
+  @apply text-3xl font-poppins caret-slate-600
+}

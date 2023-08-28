@@ -1,0 +1,9 @@
+.title {
+  @apply text-center font-bold text-[3rem]
+  text-gray-700 mb-5
+}
+
+.link {
+  @apply flex items-center rounded-full
+   justify-center focus:outline-none;
+}
