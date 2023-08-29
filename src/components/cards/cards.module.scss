@@ -1,0 +1,15 @@
+.wrap {
+  @apply grid grid-cols-4 gap-5
+}
+
+.card {
+  @apply relative h-[200px] overflow-hidden rounded-2xl drop-shadow-md flex items-end cursor-pointer
+}
+
+.image {
+  @apply absolute w-full h-full object-cover -z-10
+}
+
+.text {
+  @apply p-2 bg-white w-full overflow-hidden h-16 text-ellipsis whitespace-nowrap
+}

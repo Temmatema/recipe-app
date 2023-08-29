@@ -9,6 +9,11 @@ const logos = [
     imgSrc: "src/img/query-logo.png",
   },
   {
+    name: "Router",
+    url: "https://reactrouter.com/en/main",
+    imgSrc: "src/img/router-logo.png",
+  },
+  {
     name: "Redux",
     url: "https://redux.js.org/",
     imgSrc: "src/img/redux-logo.png",
@@ -68,7 +73,7 @@ const StackButtons: FC = () => {
       y: 0,
       opacity: 1
     }
-  };
+  }
 
   return (
     <motion.div variants={container} className="flex justify-center gap-5">

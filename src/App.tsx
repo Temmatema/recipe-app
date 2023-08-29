@@ -1,14 +1,14 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import Main from "./pages/IntroMain/IntroMain"
+import Intro from "./components/intro/Intro";
+import { MainLink } from "./components/mainLink/MainLink";
 
-const queryClient = new QueryClient()
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Main/>
-    </QueryClientProvider>
-  )
+    <>
+      <Intro />
+      <MainLink/>
+    </>
+  );
 }
 
-export default App
+export default App;

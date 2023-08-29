@@ -15,7 +15,7 @@ const Intro: FC = () => {
       animate="visible"
       variants={animationVariants}
       transition={{ duration: 1 }}
-      className="pt-20"
+      className="pt-[200px] mb-20"
     >
       <h1 className={styles.title}>Welcome to my recipe search project</h1>
       <StackButtons />
