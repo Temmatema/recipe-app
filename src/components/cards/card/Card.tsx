@@ -1,38 +1,44 @@
-import { FC } from "react"
-import {motion} from 'framer-motion'
-import styles from '../cards.module.scss'
-import { useNavigate } from "react-router-dom"
+import { FC, useState } from "react";
+import { motion } from "framer-motion";
+import styles from "../cards.module.scss";
+import { RecipeProps } from "../../../types/recipes";
+import Tags from "./CardComponets/Tags";
+import CardImage from "./CardComponets/CardImage";
+import CardInnerBlock from "./CardComponets/CardInnerBlock";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-interface CardProps {
-  id: string;
-  src: string;
-  title: string;
-}
-
-const Card:FC<CardProps> = ({id, src, title}) => {
-  const navigate = useNavigate()
+const Card: FC<RecipeProps> = ({ id, src, title, country, tags, category }) => {
+  const [isLiked, setIsLiked] = useState(false);
 
   const card = {
     hidden: { y: 60, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
-    }
-  }
+      opacity: 1,
+    },
+  };
 
   return (
-    <motion.a
-    onClick={() => navigate(`/recipe/${id}`)}
-    variants={card}
-    initial='hidden'
-    animate='visible'
-    whileHover={{scale: 1.1}} 
-    transition={{duration: 0.3}}
-    className={styles.card}>
-      <img className={styles.image} src={src} alt="Картинка" />
-      <p className={styles.text}>{title}</p>
-    </motion.a>
-  )
-}
+    <motion.div
+      variants={card}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 0.3 }}
+      className={styles.card}
+    >
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className={styles.card__favorite}
+        onClick={() => setIsLiked(!isLiked)}
+      >
+        {isLiked ? <AiFillHeart /> : <AiOutlineHeart />}
+      </motion.button>
+      <Tags tags={tags} />
+      <CardImage id={id} src={src} />
+      <CardInnerBlock category={category} country={country} title={title} />
+    </motion.div>
+  );
+};
 
-export default Card
+export default Card;

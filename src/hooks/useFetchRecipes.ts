@@ -7,5 +7,7 @@ export const useFetchRecipes = (searchTerm?: string) => {
     queryKey: ["recipe"],
     queryFn: (): Promise<ApiResponse> =>
       new RecipeService().fetchRecipe(searchTerm),
+    staleTime: 0,
+    refetchOnWindowFocus: false,
   });
 };

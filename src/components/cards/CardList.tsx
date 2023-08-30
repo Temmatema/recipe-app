@@ -10,16 +10,19 @@ interface CardListProps {
 const CardList: FC<CardListProps> = ({ items }) => {
   return (
     <div className={styles.wrap}>
-      {items.map((item) => {
+      {items ? items.map((item) => {
         return (
           <Card
             key={parseInt(item.idMeal)}
             id={item.idMeal}
             src={item.strMealThumb}
             title={item.strMeal}
+            country={item.strArea}
+            category={item.strCategory}
+            tags={item.strTags}
           />
         );
-      })}
+      }) : <h1>Nothing</h1>}
     </div>
   );
 };

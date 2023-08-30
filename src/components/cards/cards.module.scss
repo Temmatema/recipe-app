@@ -3,13 +3,49 @@
 }
 
 .card {
-  @apply relative h-[200px] overflow-hidden rounded-2xl drop-shadow-md flex items-end cursor-pointer
+  @apply relative h-[200px] overflow-hidden rounded-2xl drop-shadow-md flex items-end 
 }
 
-.image {
-  @apply absolute w-full h-full object-cover -z-10
+.card__image {
+  @apply absolute w-full h-full object-cover -z-10 cursor-pointer rounded-2xl
 }
 
 .text {
-  @apply p-2 bg-white w-full overflow-hidden h-16 text-ellipsis whitespace-nowrap
+  @apply overflow-hidden text-ellipsis whitespace-nowrap
+}
+
+.card__inner {
+  @apply bg-white w-full h-16 p-2 flex flex-col justify-between
+}
+
+.card__favorite {
+  @apply w-6 h-6 bg-[#FE724C] right-2 top-2 absolute rounded-full justify-center items-center flex;
+
+  svg {
+    @apply w-4 h-4 min-w-[4rem] text-white
+  }
+}
+
+.card__country {
+  @apply flex items-center gap-1;
+
+  p {
+    @apply text-sm text-gray-500;
+  }
+
+  svg {
+    @apply text-gray-600;
+  }
+}
+
+.tags__block {
+  @apply flex gap-1.5 absolute top-2 left-2 flex-wrap right-7
+}
+
+.tag {
+  @apply text-xs bg-[#FE724C] px-1 py-0.5 text-white rounded-md
+}
+
+.card__category {
+  @apply flex w-7 min-w-[28px] h-7;
 }

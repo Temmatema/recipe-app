@@ -7,8 +7,8 @@ export class RecipeService {
     return axios
       .get(this.BASE_URL, {
         params: {
-          s: searchTerm ? searchTerm : 'chicken',
-        }
+          s: searchTerm ? searchTerm : "stew",
+        },
       })
       .then((res) => res.data);
   }
