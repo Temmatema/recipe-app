@@ -87,7 +87,7 @@ const StackButtons: FC = () => {
           className={styles.link}
           variants={link}
         >
-          <img src={`./img/${logo.imgSrc}`} width='50' height='50' alt={`${logo.name} Logo`} />
+          <img src={`/img/${logo.imgSrc}`} width='50' height='50' alt={`${logo.name} Logo`} />
         </motion.a>
       ))}
     </motion.div>

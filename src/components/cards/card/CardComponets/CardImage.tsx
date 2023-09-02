@@ -22,7 +22,7 @@ const CardImage: FC<CardImageProps> = ({id, src}) => {
       className='absolute w-full h-full flex -z-10 items-center justify-center'
     >
       {!imageLoaded && <Loader />}
-      <img className={styles.card__image} src={src} alt='Картинка' />
+      <img className={styles.card__image} src={`img/${src}`} alt='Картинка' />
     </motion.a>
   )
 }
