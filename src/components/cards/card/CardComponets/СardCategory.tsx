@@ -8,7 +8,7 @@ interface CardCategoryProps {
 const CardCategory: FC<CardCategoryProps> = ({ category }) => {
   return (
     <div className={styles.card__category}>
-      <img src={`src/img/${category}.png`} alt={category} />
+      <img src={`img/${category}.png`} alt={category} />
     </div>
   )
 }
