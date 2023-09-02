@@ -34,8 +34,12 @@
   src: url('fonts/poppins-v20-latin-700.woff2') format('woff2');
 }
 
+#root {
+  height: 100%;
+}
+
 html,
 body {
   height: 100%;
-  @apply font-poppins
+  @apply font-poppins;
 }
